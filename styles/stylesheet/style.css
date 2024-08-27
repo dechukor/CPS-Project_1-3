@@ -1,0 +1,296 @@
+/* Сброс, начальные значения*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'TT Lakes';
+}
+
+body {
+  height: 100vh;
+  width:100vw;
+  background-color: #F8F8F8;
+}
+
+
+/* ========================
+   Подключение шрифтов
+   ======================== */
+@font-face {
+	font-family: 'TT Lakes';
+  font-style: normal;
+	font-weight: normal;
+  src: url(../fonts/TTLakes/TTLakes-Regular.ttf); 
+ }
+
+ @font-face {
+	font-family: 'TT Lakes';
+  font-style: normal;
+	font-weight: bold;
+	src: url(../fonts/TTLakes/TTLakes-Bold.ttf);   
+ }
+
+ @font-face {
+	font-family: 'TT Lakes';
+  font-style: italic;
+	font-weight: normal;
+	src: url(../fonts/TTLakes/TTLakes-Italic.ttf);   
+ }
+
+/* ========================
+   Кнопки
+   ======================== */
+
+
+/* Основная кнопка */
+.primary-btn {
+  height: 40px;
+  border-radius: 20px;
+  border: none; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  white-space: nowrap;    
+  background:none;   
+}
+.primary-btn_indent {
+  margin-left: 28px;
+}
+
+/* Навигационная кнопка */
+.nav-btn {
+  height: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+  font-size: 16px;
+  white-space: nowrap; 
+  color: #7E7E82;
+  background: none;
+  border: 2px solid transparent;   
+}
+
+.nav-btn:hover {
+  background: #FFFFFF;
+  border-color: #B8FFEC;   
+}
+
+/* Кнопка "Читать далее" */
+.read-more-btn {
+  color: #1B1C21;
+  font-weight: bold;
+  font-size: 16px;
+  white-space: nowrap;
+  margin: 16px;
+  background: none;
+  border: none;
+}
+
+/* ========================
+   Шапка
+   ======================== */
+
+.main-hdr {
+  background-color: white;
+}   
+
+/* Блок-список с кнопками (шапка) */
+.menu-header {  
+  display: flex; 
+  align-items: center;
+  height: 88px;  
+  list-style-type: none;
+  margin-left: 16px;
+  margin-right: 16px;  
+}
+
+/* Элемент списка с кнопками (шапка) */
+.menu-header__item {
+  margin-left: 16px;
+}
+
+.menu-header__item:first-child {
+  margin-left: 0px;
+}
+
+/* Отключение видимости кнопок меню предназначенных для режима планшета */
+.tablet_vis {
+  display: none;
+}
+
+/* Отключение видимости кнопок меню предназначенных для режима ПК */
+.desktop_vis {
+  display: none;
+}
+
+/* Смещение части элементов к правому краю (шапка) */
+.menu-header__item_pos-right {
+  margin-right: auto;
+}
+
+/* Элемент-разделитель (шапка) */
+.menu-header__sepline {
+  width: 2px;
+  height: 32px;
+  background-color: #EAEAEA;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+/* .tablet {
+  display: none;
+} */
+
+/* ========================
+   Основная часть страницы
+   ======================== */
+
+.main-sect {
+  display: flex;
+  flex-direction: column;
+    
+}
+
+/* Секция заголовка (основная часть страницы) */
+.main-sect__hdline {
+  margin-top: 24px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+}
+
+/* Плашка перед заголовком (основная часть страницы) */
+.main-sect__hdline::before{
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 40px;
+  background-color: #41F6D7;
+  border-radius: 0px 4px 4px 0px;
+}
+
+/* Заголовок (основная часть страницы) */
+.main-sect__tit {
+   font-size: 28px;
+   font-weight: bold;
+   white-space: nowrap;
+   margin-left: 16px;
+   margin-right: auto;
+   
+}
+
+/* Секция навигации (основная часть страницы) */
+.main-sect__nav {
+  margin-top: 24px;
+}
+
+/* Блок-список с кнопками навигации (основная часть страницы) */
+.nav-list {
+  margin-left: 16px;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+  align-items: center;
+  list-style-type: none;
+}
+
+/* Секция контента (основная часть страницы) */
+.main-sect__cont {  
+  margin-top: 24px;
+  margin-right: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+   
+}
+
+/* Блок информационной части (текст + читать далее) (основная часть страницы) */
+.main-sect__info{
+  margin-left: 16px;
+  margin-right: 16px; 
+}
+/* Блок для текста (основная часть страницы) */
+.main-sect__text {
+  max-height: 90px;
+  font-size: 14px;
+  overflow: hidden;  
+}
+
+/* Блок для фото (основная часть страницы) */
+.main-sect__photo{
+  margin-left: 0px;
+}
+
+/* Установка ширины фото (основная часть страницы) */
+.main-sect__photo > img {
+  width: 320px;
+}
+
+/* ====================================
+   Корректировки для экранов планшетов
+   ====================================*/
+
+@media (min-width: 768px) {
+  /* Включение видимости кнопок меню предназначенных для режима планшета */
+  .tablet_vis {
+    display: inline;
+  }
+
+  /* Сдвиг блока для фото от блока с текстом (основная часть страницы) */
+  .main-sect__photo{
+    margin-left: 20px;
+  }
+
+  /* Установка ширины фото в режиме планшета (основная часть страницы) */
+  .main-sect__photo > img {
+  width: 360px;
+  }
+  /* Отмена переноса блока с фото под блок с текстом (основная часть страницы) */
+  .main-sect__cont {  
+    flex-wrap: nowrap;     
+  }
+  /* Изменение высоты блока с текстом (основная часть страницы)*/
+  .main-sect__text {
+    max-height: 160px;     
+  }
+}
+
+/* =============================
+   Корректировки для экранов ПК
+   ============================= */
+
+@media (min-width: 1120px) {
+  /* Отключение видимости Шапки в режиме ПК */ 
+  .main-hdr {
+    display: none;
+  }
+  /* Включение видимости кнопок меню предназначенных для режима ПК */
+  .desktop_vis {
+    display: flex;
+  }
+   /* Отмена переноса блока с фото под блок с текстом (основная часть страницы) */
+  .main-sect__cont {  
+    flex-wrap: nowrap;     
+  }
+  /* Включение переноса кнопок навигации на след. строку (основная часть страницы) */
+  .nav-list {
+    flex-wrap: wrap;    
+  }
+
+  /* Сдвиг блока для фото от блока с текстом (основная часть страницы) */
+  .main-sect__photo{
+    margin-left: 20px;
+  }
+  
+  /* Установка ширины фото в режиме ПК (основная часть страницы) */
+  .main-sect__photo > img {
+  width: 532px;
+  }
+   /* Отмена переноса блока с фото под блок с текстом (основная часть страницы) */
+   .main-sect__cont {  
+    flex-wrap: nowrap;     
+  }
+  /* Изменение высоты блока с текстом (основная часть страницы)*/
+  .main-sect__text {
+    max-height: 160px;     
+  }
+}
