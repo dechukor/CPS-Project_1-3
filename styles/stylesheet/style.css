@@ -66,13 +66,15 @@ body {
   white-space: nowrap; 
   color: #7E7E82;
   background: none;
-  border: 2px solid transparent;   
+  border: 2px solid transparent;
+  border-radius: 4px;   
 }
 
-.nav-btn:hover {
+.nav-btn-current {
   background: #FFFFFF;
-  border-color: #B8FFEC;   
+  border-color: #B8FFEC; 
 }
+
 
 /* Кнопка "Читать далее" */
 .read-more-btn {
@@ -135,10 +137,6 @@ body {
   margin-left: 4px;
   margin-right: 4px;
 }
-
-/* .tablet {
-  display: none;
-} */
 
 /* ========================
    Основная часть страницы
@@ -280,7 +278,7 @@ body {
   .main-sect__photo{
     margin-left: 20px;
   }
-  
+
   /* Установка ширины фото в режиме ПК (основная часть страницы) */
   .main-sect__photo > img {
   width: 532px;
